@@ -1,0 +1,370 @@
+<title>まよなか屋 Art Pack</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@800;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+/* Layout: one column like a ticket rail at the stall; night-street ground, cream paper cards, a lantern-orange action and a mint "done" stamp. */
+:root{
+  --night:#131A31; --street:#1C2645; --paper:#FFF4E2; --ink:#2B1D14; --soft:#C9C1D6; --lantern:#FF9A3D; --noren:#C8463A; --mint:#5ED3B0; --rule:rgba(255,244,226,.14);
+  --display:"M PLUS Rounded 1c","Hiragino Maru Gothic ProN","Arial Rounded MT Bold",system-ui,sans-serif;
+  --body:"Zen Kaku Gothic New","Hiragino Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+body{background:var(--night);color:var(--paper);font-family:var(--body);font-size:16px;line-height:1.6;}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--night);}
+.wrap{max-width:680px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 64px;}
+.kicker{font:800 12px/1.2 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--lantern);margin:0 0 8px;}
+h1{font:900 clamp(30px,8vw,44px)/1.1 var(--display);margin:0 0 12px;text-wrap:balance;}
+h1 small{display:block;font-size:.42em;letter-spacing:.06em;color:var(--soft);margin-top:6px;}
+.lead{color:var(--soft);margin:0 0 22px;max-width:60ch;}
+.how{background:var(--street);border:1px solid var(--rule);border-radius:14px;padding:16px 18px;margin:0 0 18px;}
+.how h2,.sec h2{font:900 20px/1.25 var(--display);margin:0 0 8px;}
+.how ol{margin:0;padding-left:1.3em;display:grid;gap:6px;}
+.how li::marker{font-family:var(--display);color:var(--lantern);font-weight:900;}
+.how a,.foot a{color:var(--mint);}
+.tips{margin:12px 0 0;padding:10px 0 0;border-top:1px solid var(--rule);color:var(--soft);font-size:14px;display:grid;gap:4px;}
+.style{background:var(--paper);color:var(--ink);border-radius:14px;padding:16px 18px;margin:0 0 18px;box-shadow:0 0 0 4px rgba(200,70,58,.35);}
+.style h2{font:900 18px/1.3 var(--display);margin:0 0 4px;color:var(--noren);}
+.style .why{margin:0 0 10px;font-size:14px;color:#6B5848;}
+.prompt{white-space:pre-wrap;margin:0;font-size:15px;line-height:1.55;}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--night);padding:10px 0;margin:0 0 6px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--rule);}
+.bar .count{font:900 16px var(--display);font-variant-numeric:tabular-nums;}
+.bar .track{flex:1 1 140px;height:8px;border-radius:4px;background:var(--street);overflow:hidden;}
+.bar .fill{height:100%;width:0;background:var(--mint);transition:width .3s;}
+.bar label{font-size:14px;color:var(--soft);display:flex;gap:6px;align-items:center;}
+.sec{margin:26px 0 0;display:grid;gap:14px;}
+.sec .note{margin:-6px 0 0;color:var(--soft);font-size:14px;}
+.pic{background:var(--paper);color:var(--ink);border-radius:14px;padding:14px 16px 16px;display:grid;gap:10px;min-width:0;}
+.pic .top{display:flex;align-items:center;gap:10px;}
+.pic .num{flex:0 0 auto;min-width:30px;height:30px;border-radius:15px;padding:0 6px;display:grid;place-items:center;background:var(--noren);color:var(--paper);font:900 15px var(--display);font-variant-numeric:tabular-nums;}
+.pic h3{font:900 18px/1.25 var(--display);margin:0;flex:1;min-width:0;}
+.pic .shape{font:800 11px var(--display);letter-spacing:.1em;text-transform:uppercase;color:#7A6656;border:1.5px solid #D9C9B4;border-radius:999px;padding:2px 8px;}
+.pic .use{margin:0;font-size:14px;color:#6B5848;}
+.sk{display:block;border-radius:10px;overflow:hidden;background:#DCD5CA;}
+.sk img{display:block;width:100%;height:auto;max-width:100%;}
+.sk.square{max-width:240px;}
+.sk.tall{max-width:200px;}
+.pic,.style{color-scheme:light;}
+.nosk{margin:0;font-size:14px;color:#6B5848;font-style:italic;}
+.acts{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;}
+button.copy{font:900 15px var(--display);background:var(--lantern);color:var(--ink);border:0;border-radius:10px;padding:10px 16px;cursor:pointer;min-height:44px;}
+button.copy.ok{background:var(--mint);}
+button.copy:focus-visible,.open:focus-visible,.done input:focus-visible{outline:3px solid var(--noren);outline-offset:2px;}
+.open{color:var(--noren);font-weight:700;text-decoration:underline;text-underline-offset:3px;}
+.done{margin-left:auto;display:flex;align-items:center;gap:6px;font-weight:700;color:#6B5848;cursor:pointer;min-height:44px;}
+.done input{width:22px;height:22px;accent-color:#2E9E7E;}
+.pic.is-done{background:#E8F6EF;}
+.pic.is-done .num{background:#2E9E7E;}
+body.hide-done .pic.is-done{display:none;}
+.foot{margin:34px 0 0;color:var(--soft);font-size:14px;}
+@media (prefers-reduced-motion:reduce){.bar .fill{transition:none;}}
+</style>
+<div class="wrap">
+  <p class="kicker">Midnight Restaurant · art for ChatGPT</p>
+  <h1>まよなか屋 art pack<small>36 pictures, one chat, one style</small></h1>
+  <p class="lead">Everything the game draws, ready to send to ChatGPT. Each picture has a prompt to copy and a sketch from the current game that shows the shape and the layout.</p>
+  <div class="how">
+    <h2>How to make them</h2>
+    <ol>
+      <li>Start a new ChatGPT chat. Attach your target picture, paste the style message below, and send it.</li>
+      <li>For each picture: open its sketch, save it, and attach it in the chat. Then tap <b>Copy prompt</b>, paste and send.</li>
+      <li>Save what ChatGPT makes. On iPhone, <b>Save to Files</b> keeps the see-through background.</li>
+      <li>Upload them to <a href="https://github.com/LACHENDE/midnight-restaurant-art" target="_blank" rel="noopener">github.com/LACHENDE/midnight-restaurant-art</a> with <b>Add file → Upload files</b>. Any file names are fine.</li>
+      <li>Tell Claude they're up, and they go into the game.</li>
+    </ol>
+    <div class="tips">
+      <span>If a picture drifts from your style, reply: “Match the style of my first picture more closely.”</span>
+      <span>A white or black background instead of a see-through one is fine. Claude can cut it out.</span>
+      <span>No Add file button on your phone? In Safari tap aA → Request Desktop Website.</span>
+    </div>
+  </div>
+  <div class="style">
+    <h2>Style message: send this first</h2>
+    <p class="why">Attach your target picture to this message. It sets the look for all 36 pictures.</p>
+    <p class="prompt" id="t0">I'm making a cozy two-player ramen-stall game called Midnight Restaurant, and I'll ask you for 36 game pictures, one per message. The picture attached here is my style target: match it in every picture.
+
+Style: chunky, rounded, toy-like shapes, like soft vinyl toys or smooth clay, with simple forms and not too many details. Warm, soft light from orange paper lanterns, gentle shading and soft highlights, a cozy rainy night in Japan. Colours: warm wood browns, lantern orange, noren red, deep navy night, cream, and a little mint green for small accents only.
+
+Camera: from the front and a little above, like a side-view game, so round things such as bowls, pots and cups show an oval top.
+
+Rules for every picture:
+- No text, letters, kana, numbers or logos anywhere, and no watermark.
+- For an object or a character: only that one thing, centred, whole, with space around it, on a transparent background. No table, no floor, no cast shadow.
+- For a scene: fill the whole picture, with no people in it.
+- Keep the same style, lighting and level of detail in every picture of this chat.
+
+With each request I'll attach a rough sketch from the current version of the game. Use it only for the shape, the angle and where things go, never for the style. Reply &quot;ready&quot; and wait for my first request.</p>
+    <div class="acts" style="margin-top:12px"><button type="button" class="copy" data-t="t0">Copy style message</button></div>
+  </div>
+  <div class="bar"><span class="count" id="count">0 of 36 done</span><div class="track"><div class="fill" id="fill"></div></div><label><input type="checkbox" id="hideDone"> Hide done</label></div>
+<section class="sec"><h2>Scenes</h2><p class="note">Start here: the two big pictures set the look for everything after them.</p><article class="pic" id="p1" data-n="1">
+  <div class="top"><span class="num">1</span><h3>Kitchen</h3><span class="shape">Wide</span></div>
+  <p class="use">The cook's whole screen.</p>
+  <a class="sk wide" href="ref/01-kitchen.jpg" target="_blank" rel="noopener"><img src="ref/01-kitchen.jpg" alt="Sketch for Kitchen" loading="lazy" width="1536" height="1024"></a>
+  <p class="prompt" id="t1">Picture 1 of 36: The kitchen. A wide landscape picture of the cook's side of the ramen stall, seen straight on, with no people and nothing on the counter. Follow the sketch's layout: a dark, warm wooden wall; a window at the upper right looking out on the rainy navy street with lit windows; a wooden shelf with five small jars left of centre; a round orange paper lantern glowing at the upper left; a strip of red noren cloth along the very top; a small empty metal hook rail at the left; a brushed-steel stove top across the middle; a warm wooden cabinet front below it; and at the right, a dark serving hatch with a plain red cloth across its top. The top and bottom edges will be cropped, so keep everything important in the middle band.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t1">Copy prompt</button><a class="open" href="ref/01-kitchen.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d1" data-n="1"> Done</label></div>
+</article>
+<article class="pic" id="p2" data-n="2">
+  <div class="top"><span class="num">2</span><h3>Counter</h3><span class="shape">Wide</span></div>
+  <p class="use">The counter player's whole screen. The game cuts it along the counter's far edge, so guests sit behind the counter.</p>
+  <a class="sk wide" href="ref/02-counter.jpg" target="_blank" rel="noopener"><img src="ref/02-counter.jpg" alt="Sketch for Counter" loading="lazy" width="1536" height="1024"></a>
+  <p class="prompt" id="t2">Picture 2 of 36: The counter. A wide landscape picture from inside the stall, behind the counter, looking out at the rainy street, with no people. Follow the sketch's layout: wooden posts at the left and right edges; a dark roof beam with red noren curtains along the top; a glowing orange paper lantern hanging at each side; the rainy navy street beyond, with low wooden buildings, lit windows, small lanterns, wet stones and hydrangea bushes, and a blank red vertical shop sign across the street left of centre; at the lower left, the dark hatch from the kitchen with a plain red cloth across its top and a small wooden tray in front of it; and across the bottom, an empty wooden counter top in the foreground. The counter's far edge must be one straight, level line across the whole picture. The top and bottom edges will be cropped, so keep everything important in the middle band.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t2">Copy prompt</button><a class="open" href="ref/02-counter.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d2" data-n="2"> Done</label></div>
+</article></section>
+<section class="sec"><h2>Guests</h2><p class="note">Five customers, each sitting and then calling for staff. The game paints their dot eyes and smiles, so the faces stay blank.</p><article class="pic" id="p3" data-n="3">
+  <div class="top"><span class="num">3</span><h3>Haru</h3><span class="shape">Tall</span></div>
+  <p class="use">Sits at the counter. Also waits outside, smaller, under an umbrella.</p>
+  <a class="sk tall" href="ref/03-guest-haru.jpg" target="_blank" rel="noopener"><img src="ref/03-guest-haru.jpg" alt="Sketch for Haru" loading="lazy" width="1024" height="1536"></a>
+  <p class="prompt" id="t3">Picture 3 of 36: Haru, a customer. A tall portrait picture with a transparent background. A chunky toy figure seen from the front, from the waist up, sitting as if at a counter (don't draw the counter). Big round head and a rounded body. Haru has brown hair in a high ponytail tied with two red bows, and a red jacket. Leave the face blank, like an unpainted toy: no eyes, no mouth, no blush, just smooth skin. The game draws the face on top.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t3">Copy prompt</button><a class="open" href="ref/03-guest-haru.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d3" data-n="3"> Done</label></div>
+</article>
+<article class="pic" id="p4" data-n="4">
+  <div class="top"><span class="num">4</span><h3>Ken</h3><span class="shape">Tall</span></div>
+  <p class="use">Sits at the counter. Also waits outside, smaller, under an umbrella.</p>
+  <a class="sk tall" href="ref/04-guest-ken.jpg" target="_blank" rel="noopener"><img src="ref/04-guest-ken.jpg" alt="Sketch for Ken" loading="lazy" width="1024" height="1536"></a>
+  <p class="prompt" id="t4">Picture 4 of 36: Ken, a customer. A tall portrait picture with a transparent background. A chunky toy figure seen from the front, from the waist up, sitting as if at a counter (don't draw the counter). Big round head and a rounded body. Ken has short dark hair under a navy-blue cap, and an olive-green jacket. Leave the face blank, like an unpainted toy: no eyes, no mouth, no blush, just smooth skin. The game draws the face on top.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t4">Copy prompt</button><a class="open" href="ref/04-guest-ken.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d4" data-n="4"> Done</label></div>
+</article>
+<article class="pic" id="p5" data-n="5">
+  <div class="top"><span class="num">5</span><h3>Mika</h3><span class="shape">Tall</span></div>
+  <p class="use">Sits at the counter. Also waits outside, smaller, under an umbrella.</p>
+  <a class="sk tall" href="ref/05-guest-mika.jpg" target="_blank" rel="noopener"><img src="ref/05-guest-mika.jpg" alt="Sketch for Mika" loading="lazy" width="1024" height="1536"></a>
+  <p class="prompt" id="t5">Picture 5 of 36: Mika, a customer. A tall portrait picture with a transparent background. A chunky toy figure seen from the front, from the waist up, sitting as if at a counter (don't draw the counter). Big round head and a rounded body. Mika has a dark-brown bob haircut, and a mustard-yellow jacket. Leave the face blank, like an unpainted toy: no eyes, no mouth, no blush, just smooth skin. The game draws the face on top.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t5">Copy prompt</button><a class="open" href="ref/05-guest-mika.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d5" data-n="5"> Done</label></div>
+</article>
+<article class="pic" id="p6" data-n="6">
+  <div class="top"><span class="num">6</span><h3>Sora</h3><span class="shape">Tall</span></div>
+  <p class="use">Sits at the counter. Also waits outside, smaller, under an umbrella.</p>
+  <a class="sk tall" href="ref/06-guest-sora.jpg" target="_blank" rel="noopener"><img src="ref/06-guest-sora.jpg" alt="Sketch for Sora" loading="lazy" width="1024" height="1536"></a>
+  <p class="prompt" id="t6">Picture 6 of 36: Sora, a customer. A tall portrait picture with a transparent background. A chunky toy figure seen from the front, from the waist up, sitting as if at a counter (don't draw the counter). Big round head and a rounded body. Sora has spiky near-black hair, and a blue jacket. Leave the face blank, like an unpainted toy: no eyes, no mouth, no blush, just smooth skin. The game draws the face on top.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t6">Copy prompt</button><a class="open" href="ref/06-guest-sora.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d6" data-n="6"> Done</label></div>
+</article>
+<article class="pic" id="p7" data-n="7">
+  <div class="top"><span class="num">7</span><h3>Yuki</h3><span class="shape">Tall</span></div>
+  <p class="use">Sits at the counter. Also waits outside, smaller, under an umbrella.</p>
+  <a class="sk tall" href="ref/07-guest-yuki.jpg" target="_blank" rel="noopener"><img src="ref/07-guest-yuki.jpg" alt="Sketch for Yuki" loading="lazy" width="1024" height="1536"></a>
+  <p class="prompt" id="t7">Picture 7 of 36: Yuki, a customer. A tall portrait picture with a transparent background. A chunky toy figure seen from the front, from the waist up, sitting as if at a counter (don't draw the counter). Big round head and a rounded body. Yuki has long brown hair past the shoulders, and a purple jacket. Leave the face blank, like an unpainted toy: no eyes, no mouth, no blush, just smooth skin. The game draws the face on top.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t7">Copy prompt</button><a class="open" href="ref/07-guest-yuki.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d7" data-n="7"> Done</label></div>
+</article>
+<article class="pic" id="p8" data-n="8">
+  <div class="top"><span class="num">8</span><h3>Haru calls for staff</h3><span class="shape">Tall</span></div>
+  <p class="use">When the guest wants to order.</p>
+  <a class="sk tall" href="ref/08-ask-haru.jpg" target="_blank" rel="noopener"><img src="ref/08-ask-haru.jpg" alt="Sketch for Haru calls for staff" loading="lazy" width="1024" height="1536"></a>
+  <p class="prompt" id="t8">Picture 8 of 36: Haru calling for the staff. The same Haru as picture 3, with the identical design, size and framing, but with one hand raised high beside the head. Still a blank face, and a transparent background.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t8">Copy prompt</button><a class="open" href="ref/08-ask-haru.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d8" data-n="8"> Done</label></div>
+</article>
+<article class="pic" id="p9" data-n="9">
+  <div class="top"><span class="num">9</span><h3>Ken calls for staff</h3><span class="shape">Tall</span></div>
+  <p class="use">When the guest wants to order.</p>
+  <a class="sk tall" href="ref/09-ask-ken.jpg" target="_blank" rel="noopener"><img src="ref/09-ask-ken.jpg" alt="Sketch for Ken calls for staff" loading="lazy" width="1024" height="1536"></a>
+  <p class="prompt" id="t9">Picture 9 of 36: Ken calling for the staff. The same Ken as picture 4, with the identical design, size and framing, but with one hand raised high beside the head. Still a blank face, and a transparent background.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t9">Copy prompt</button><a class="open" href="ref/09-ask-ken.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d9" data-n="9"> Done</label></div>
+</article>
+<article class="pic" id="p10" data-n="10">
+  <div class="top"><span class="num">10</span><h3>Mika calls for staff</h3><span class="shape">Tall</span></div>
+  <p class="use">When the guest wants to order.</p>
+  <a class="sk tall" href="ref/10-ask-mika.jpg" target="_blank" rel="noopener"><img src="ref/10-ask-mika.jpg" alt="Sketch for Mika calls for staff" loading="lazy" width="1024" height="1536"></a>
+  <p class="prompt" id="t10">Picture 10 of 36: Mika calling for the staff. The same Mika as picture 5, with the identical design, size and framing, but with one hand raised high beside the head. Still a blank face, and a transparent background.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t10">Copy prompt</button><a class="open" href="ref/10-ask-mika.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d10" data-n="10"> Done</label></div>
+</article>
+<article class="pic" id="p11" data-n="11">
+  <div class="top"><span class="num">11</span><h3>Sora calls for staff</h3><span class="shape">Tall</span></div>
+  <p class="use">When the guest wants to order.</p>
+  <a class="sk tall" href="ref/11-ask-sora.jpg" target="_blank" rel="noopener"><img src="ref/11-ask-sora.jpg" alt="Sketch for Sora calls for staff" loading="lazy" width="1024" height="1536"></a>
+  <p class="prompt" id="t11">Picture 11 of 36: Sora calling for the staff. The same Sora as picture 6, with the identical design, size and framing, but with one hand raised high beside the head. Still a blank face, and a transparent background.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t11">Copy prompt</button><a class="open" href="ref/11-ask-sora.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d11" data-n="11"> Done</label></div>
+</article>
+<article class="pic" id="p12" data-n="12">
+  <div class="top"><span class="num">12</span><h3>Yuki calls for staff</h3><span class="shape">Tall</span></div>
+  <p class="use">When the guest wants to order.</p>
+  <a class="sk tall" href="ref/12-ask-yuki.jpg" target="_blank" rel="noopener"><img src="ref/12-ask-yuki.jpg" alt="Sketch for Yuki calls for staff" loading="lazy" width="1024" height="1536"></a>
+  <p class="prompt" id="t12">Picture 12 of 36: Yuki calling for the staff. The same Yuki as picture 7, with the identical design, size and framing, but with one hand raised high beside the head. Still a blank face, and a transparent background.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t12">Copy prompt</button><a class="open" href="ref/12-ask-yuki.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d12" data-n="12"> Done</label></div>
+</article></section>
+<section class="sec"><h2>Kitchen</h2><p class="note">The cook's tools and the three toppings. Each one is cut out and moved around by the game.</p><article class="pic" id="p13" data-n="13">
+  <div class="top"><span class="num">13</span><h3>Stock pot</h3><span class="shape">Square</span></div>
+  <p class="use">The noodles boil in it.</p>
+  <a class="sk square" href="ref/13-stock-pot.jpg" target="_blank" rel="noopener"><img src="ref/13-stock-pot.jpg" alt="Sketch for Stock pot" loading="lazy" width="1024" height="1024"></a>
+  <p class="prompt" id="t13">Picture 13 of 36: The big stock pot. A square picture with a transparent background. A large, wide stainless-steel stock pot full of boiling water, seen from the front and a little above, so the water shows as an oval. Pale, bubbling water. No steam (the game adds it).</p>
+  <div class="acts"><button type="button" class="copy" data-t="t13">Copy prompt</button><a class="open" href="ref/13-stock-pot.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d13" data-n="13"> Done</label></div>
+</article>
+<article class="pic" id="p14" data-n="14">
+  <div class="top"><span class="num">14</span><h3>Broth pot</h3><span class="shape">Square</span></div>
+  <p class="use">The ladle dips into it.</p>
+  <a class="sk square" href="ref/14-broth-pot.jpg" target="_blank" rel="noopener"><img src="ref/14-broth-pot.jpg" alt="Sketch for Broth pot" loading="lazy" width="1024" height="1024"></a>
+  <p class="prompt" id="t14">Picture 14 of 36: The broth pot. A square picture with a transparent background. A smaller stainless-steel pot full of golden-brown shoyu broth, at the same angle as the stock pot.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t14">Copy prompt</button><a class="open" href="ref/14-broth-pot.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d14" data-n="14"> Done</label></div>
+</article>
+<article class="pic" id="p15" data-n="15">
+  <div class="top"><span class="num">15</span><h3>Ladle</h3><span class="shape">Square</span></div>
+  <p class="use">Held over a bowl to pour the broth.</p>
+  <a class="sk square" href="ref/15-ladle.jpg" target="_blank" rel="noopener"><img src="ref/15-ladle.jpg" alt="Sketch for Ladle" loading="lazy" width="1024" height="1024"></a>
+  <p class="prompt" id="t15">Picture 15 of 36: The ladle. A square picture with a transparent background. A ramen ladle: a small round steel cup holding a little golden broth, with a long handle angled up to the right, ending in a wooden grip.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t15">Copy prompt</button><a class="open" href="ref/15-ladle.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d15" data-n="15"> Done</label></div>
+</article>
+<article class="pic" id="p16" data-n="16">
+  <div class="top"><span class="num">16</span><h3>Noodle basket</h3><span class="shape">Square</span></div>
+  <p class="use">Hangs on its hook; noodles are dragged into it.</p>
+  <a class="sk square" href="ref/16-basket.jpg" target="_blank" rel="noopener"><img src="ref/16-basket.jpg" alt="Sketch for Noodle basket" loading="lazy" width="1024" height="1024"></a>
+  <p class="prompt" id="t16">Picture 16 of 36: The noodle basket. A square picture with a transparent background. A ramen noodle strainer basket (tebo): a deep cone of steel mesh with a round rim and a long wooden handle angled up to the right. Empty.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t16">Copy prompt</button><a class="open" href="ref/16-basket.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d16" data-n="16"> Done</label></div>
+</article>
+<article class="pic" id="p17" data-n="17">
+  <div class="top"><span class="num">17</span><h3>Basket of noodles</h3><span class="shape">Square</span></div>
+  <p class="use">Lifted out of the pot and onto a bowl.</p>
+  <a class="sk square" href="ref/17-basket-full.jpg" target="_blank" rel="noopener"><img src="ref/17-basket-full.jpg" alt="Sketch for Basket of noodles" loading="lazy" width="1024" height="1024"></a>
+  <p class="prompt" id="t17">Picture 17 of 36: The basket full of noodles. A square picture with a transparent background. The same basket as picture 16, at the same size and angle, now full of cooked golden ramen noodles.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t17">Copy prompt</button><a class="open" href="ref/17-basket-full.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d17" data-n="17"> Done</label></div>
+</article>
+<article class="pic" id="p18" data-n="18">
+  <div class="top"><span class="num">18</span><h3>Noodle box</h3><span class="shape">Square</span></div>
+  <p class="use">Where the noodle nests come from.</p>
+  <a class="sk square" href="ref/18-noodle-box.jpg" target="_blank" rel="noopener"><img src="ref/18-noodle-box.jpg" alt="Sketch for Noodle box" loading="lazy" width="1024" height="1024"></a>
+  <p class="prompt" id="t18">Picture 18 of 36: The noodle box. A square picture with a transparent background. A shallow wooden box seen from the front and a little above, holding three round nests of fresh, pale-yellow ramen noodles side by side.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t18">Copy prompt</button><a class="open" href="ref/18-noodle-box.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d18" data-n="18"> Done</label></div>
+</article>
+<article class="pic" id="p19" data-n="19">
+  <div class="top"><span class="num">19</span><h3>Noodle nest</h3><span class="shape">Square</span></div>
+  <p class="use">Under your finger while you drag it.</p>
+  <a class="sk square" href="ref/19-noodle-nest.jpg" target="_blank" rel="noopener"><img src="ref/19-noodle-nest.jpg" alt="Sketch for Noodle nest" loading="lazy" width="1024" height="1024"></a>
+  <p class="prompt" id="t19">Picture 19 of 36: One noodle nest. A square picture with a transparent background. A single round nest of fresh, pale-yellow ramen noodles, matching the ones in picture 18.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t19">Copy prompt</button><a class="open" href="ref/19-noodle-nest.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d19" data-n="19"> Done</label></div>
+</article>
+<article class="pic" id="p20" data-n="20">
+  <div class="top"><span class="num">20</span><h3>Ramen bowl</h3><span class="shape">Square</span></div>
+  <p class="use">Waits on the board to be filled; also carried and served.</p>
+  <a class="sk square" href="ref/20-bowl.jpg" target="_blank" rel="noopener"><img src="ref/20-bowl.jpg" alt="Sketch for Ramen bowl" loading="lazy" width="1024" height="1024"></a>
+  <p class="prompt" id="t20">Picture 20 of 36: The ramen bowl. A square picture with a transparent background. An empty white ramen bowl with a red pattern around the outside, seen from the front and a little above so the inside shows as an oval.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t20">Copy prompt</button><a class="open" href="ref/20-bowl.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d20" data-n="20"> Done</label></div>
+</article>
+<article class="pic" id="p21" data-n="21">
+  <div class="top"><span class="num">21</span><h3>Bowl of ramen</h3><span class="shape">Square</span></div>
+  <p class="use">Fades in as the broth is poured.</p>
+  <a class="sk square" href="ref/21-bowl-full.jpg" target="_blank" rel="noopener"><img src="ref/21-bowl-full.jpg" alt="Sketch for Bowl of ramen" loading="lazy" width="1024" height="1024"></a>
+  <p class="prompt" id="t21">Picture 21 of 36: A bowl of ramen. A square picture with a transparent background. The same bowl as picture 20, at the same size and angle, now filled with golden-brown broth and noodles, with no toppings at all.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t21">Copy prompt</button><a class="open" href="ref/21-bowl-full.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d21" data-n="21"> Done</label></div>
+</article>
+<article class="pic" id="p22" data-n="22">
+  <div class="top"><span class="num">22</span><h3>Egg (たまご)</h3><span class="shape">Square</span></div>
+  <p class="use">In its tray and on the bowl. Also the picture on order cards.</p>
+  <a class="sk square" href="ref/22-egg.jpg" target="_blank" rel="noopener"><img src="ref/22-egg.jpg" alt="Sketch for Egg (たまご)" loading="lazy" width="1024" height="1024"></a>
+  <p class="prompt" id="t22">Picture 22 of 36: The egg topping. A square picture with a transparent background. A soft-boiled ramen egg (ajitama) cut in half: two halves side by side with jammy orange yolks, seen from a little above.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t22">Copy prompt</button><a class="open" href="ref/22-egg.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d22" data-n="22"> Done</label></div>
+</article>
+<article class="pic" id="p23" data-n="23">
+  <div class="top"><span class="num">23</span><h3>Spring onion (ねぎ)</h3><span class="shape">Square</span></div>
+  <p class="use">In its tray and on the bowl. Also the picture on order cards.</p>
+  <a class="sk square" href="ref/23-negi.jpg" target="_blank" rel="noopener"><img src="ref/23-negi.jpg" alt="Sketch for Spring onion (ねぎ)" loading="lazy" width="1024" height="1024"></a>
+  <p class="prompt" id="t23">Picture 23 of 36: The spring onion topping. A square picture with a transparent background. A small heap of thinly sliced, bright green spring onion rings, seen from a little above.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t23">Copy prompt</button><a class="open" href="ref/23-negi.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d23" data-n="23"> Done</label></div>
+</article>
+<article class="pic" id="p24" data-n="24">
+  <div class="top"><span class="num">24</span><h3>Fish-cake swirl (なると)</h3><span class="shape">Square</span></div>
+  <p class="use">In its tray and on the bowl. Also the picture on order cards.</p>
+  <a class="sk square" href="ref/24-naruto.jpg" target="_blank" rel="noopener"><img src="ref/24-naruto.jpg" alt="Sketch for Fish-cake swirl (なると)" loading="lazy" width="1024" height="1024"></a>
+  <p class="prompt" id="t24">Picture 24 of 36: The naruto topping. A square picture with a transparent background. Two slices of naruto fish cake, white with a pink swirl and a wavy edge, overlapping slightly, seen from a little above.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t24">Copy prompt</button><a class="open" href="ref/24-naruto.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d24" data-n="24"> Done</label></div>
+</article>
+<article class="pic" id="p25" data-n="25">
+  <div class="top"><span class="num">25</span><h3>Topping tray</h3><span class="shape">Square</span></div>
+  <p class="use">Holds each topping, with its word card below.</p>
+  <a class="sk square" href="ref/25-tray.jpg" target="_blank" rel="noopener"><img src="ref/25-tray.jpg" alt="Sketch for Topping tray" loading="lazy" width="1024" height="1024"></a>
+  <p class="prompt" id="t25">Picture 25 of 36: A topping tray. A square picture with a transparent background. An empty, shallow, rectangular stainless-steel tray, seen from the front and a little above.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t25">Copy prompt</button><a class="open" href="ref/25-tray.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d25" data-n="25"> Done</label></div>
+</article>
+<article class="pic" id="p26" data-n="26">
+  <div class="top"><span class="num">26</span><h3>Small plate</h3><span class="shape">Square</span></div>
+  <p class="use">A wrong topping is dragged off onto it.</p>
+  <a class="sk square" href="ref/26-plate.jpg" target="_blank" rel="noopener"><img src="ref/26-plate.jpg" alt="Sketch for Small plate" loading="lazy" width="1024" height="1024"></a>
+  <p class="prompt" id="t26">Picture 26 of 36: The small plate. A square picture with a transparent background. A small, plain, round white plate, empty, seen from the front and a little above.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t26">Copy prompt</button><a class="open" href="ref/26-plate.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d26" data-n="26"> Done</label></div>
+</article></section>
+<section class="sec"><h2>Counter</h2><p class="note">What the counter player handles.</p><article class="pic" id="p27" data-n="27">
+  <div class="top"><span class="num">27</span><h3>Teapot</h3><span class="shape">Square</span></div>
+  <p class="use">Held over a guest's cup to pour tea.</p>
+  <a class="sk square" href="ref/27-teapot.jpg" target="_blank" rel="noopener"><img src="ref/27-teapot.jpg" alt="Sketch for Teapot" loading="lazy" width="1024" height="1024"></a>
+  <p class="prompt" id="t27">Picture 27 of 36: The teapot. A square picture with a transparent background. A round Japanese teapot, white with blue wave lines, with the spout on the right and a bamboo handle arching over the top, seen from the side.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t27">Copy prompt</button><a class="open" href="ref/27-teapot.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d27" data-n="27"> Done</label></div>
+</article>
+<article class="pic" id="p28" data-n="28">
+  <div class="top"><span class="num">28</span><h3>Teacup</h3><span class="shape">Square</span></div>
+  <p class="use">In front of each guest. The game draws the tea in it.</p>
+  <a class="sk square" href="ref/28-teacup.jpg" target="_blank" rel="noopener"><img src="ref/28-teacup.jpg" alt="Sketch for Teacup" loading="lazy" width="1024" height="1024"></a>
+  <p class="prompt" id="t28">Picture 28 of 36: The teacup. A square picture with a transparent background. An empty Japanese teacup (yunomi) with no handle, white with a thin blue wave line, seen from the front and a little above.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t28">Copy prompt</button><a class="open" href="ref/28-teacup.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d28" data-n="28"> Done</label></div>
+</article>
+<article class="pic" id="p29" data-n="29">
+  <div class="top"><span class="num">29</span><h3>Coins</h3><span class="shape">Square</span></div>
+  <p class="use">Left on the counter when a guest pays.</p>
+  <a class="sk square" href="ref/29-coins.jpg" target="_blank" rel="noopener"><img src="ref/29-coins.jpg" alt="Sketch for Coins" loading="lazy" width="1024" height="1024"></a>
+  <p class="prompt" id="t29">Picture 29 of 36: The coins. A square picture with a transparent background. A small stack of three shiny gold coins with no markings on them.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t29">Copy prompt</button><a class="open" href="ref/29-coins.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d29" data-n="29"> Done</label></div>
+</article>
+<article class="pic" id="p30" data-n="30">
+  <div class="top"><span class="num">30</span><h3>Cloth</h3><span class="shape">Square</span></div>
+  <p class="use">Rubbed over the counter to wipe it.</p>
+  <a class="sk square" href="ref/30-cloth.jpg" target="_blank" rel="noopener"><img src="ref/30-cloth.jpg" alt="Sketch for Cloth" loading="lazy" width="1024" height="1024"></a>
+  <p class="prompt" id="t30">Picture 30 of 36: The cloth. A square picture with a transparent background. A neatly folded white cleaning cloth with one blue stripe near an edge.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t30">Copy prompt</button><a class="open" href="ref/30-cloth.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d30" data-n="30"> Done</label></div>
+</article>
+<article class="pic" id="p31" data-n="31">
+  <div class="top"><span class="num">31</span><h3>Dish tub</h3><span class="shape">Square</span></div>
+  <p class="use">Finished bowls are cleared into it.</p>
+  <a class="sk square" href="ref/31-dish-tub.jpg" target="_blank" rel="noopener"><img src="ref/31-dish-tub.jpg" alt="Sketch for Dish tub" loading="lazy" width="1024" height="1024"></a>
+  <p class="prompt" id="t31">Picture 31 of 36: The dish tub. A square picture with a transparent background. An empty blue-grey plastic dish tub, seen from the front and a little above.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t31">Copy prompt</button><a class="open" href="ref/31-dish-tub.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d31" data-n="31"> Done</label></div>
+</article>
+<article class="pic" id="p32" data-n="32">
+  <div class="top"><span class="num">32</span><h3>Umbrella</h3><span class="shape">Square</span></div>
+  <p class="use">Guests waiting in the rain hold one. The game tints it a different colour for each guest.</p>
+  <a class="sk square" href="ref/32-umbrella.jpg" target="_blank" rel="noopener"><img src="ref/32-umbrella.jpg" alt="Sketch for Umbrella" loading="lazy" width="1024" height="1024"></a>
+  <p class="prompt" id="t32">Picture 32 of 36: The umbrella. A square picture with a transparent background. An open umbrella in plain cream with a wooden handle, seen from the front, with a few raindrops on it.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t32">Copy prompt</button><a class="open" href="ref/32-umbrella.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d32" data-n="32"> Done</label></div>
+</article></section>
+<section class="sec"><h2>Decorations</h2><p class="note">Small things the stall buys with its savings.</p><article class="pic" id="p33" data-n="33">
+  <div class="top"><span class="num">33</span><h3>String of lanterns</h3><span class="shape">Wide</span></div>
+  <p class="use">Unlocks at ¥1,200 of savings and hangs across the counter.</p>
+  <a class="sk wide" href="ref/33-deco-lanterns.jpg" target="_blank" rel="noopener"><img src="ref/33-deco-lanterns.jpg" alt="Sketch for String of lanterns" loading="lazy" width="1536" height="1024"></a>
+  <p class="prompt" id="t33">Picture 33 of 36: A string of lanterns. A wide landscape picture with a transparent background. Six small, round orange paper lanterns hanging in a row from a gently sagging rope, glowing softly. No letters on the lanterns.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t33">Copy prompt</button><a class="open" href="ref/33-deco-lanterns.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d33" data-n="33"> Done</label></div>
+</article>
+<article class="pic" id="p34" data-n="34">
+  <div class="top"><span class="num">34</span><h3>Lucky cat</h3><span class="shape">Square</span></div>
+  <p class="use">Unlocks at ¥3,000 and sits on the kitchen shelf.</p>
+  <a class="sk square" href="ref/34-deco-neko.jpg" target="_blank" rel="noopener"><img src="ref/34-deco-neko.jpg" alt="Sketch for Lucky cat" loading="lazy" width="1024" height="1024"></a>
+  <p class="prompt" id="t34">Picture 34 of 36: The lucky cat. A square picture with a transparent background. A white maneki-neko lucky cat, sitting, with a red collar, a gold bell and one paw raised.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t34">Copy prompt</button><a class="open" href="ref/34-deco-neko.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d34" data-n="34"> Done</label></div>
+</article>
+<article class="pic" id="p35" data-n="35">
+  <div class="top"><span class="num">35</span><h3>Hydrangeas</h3><span class="shape">Square</span></div>
+  <p class="use">Unlocks at ¥5,200 and sits on the counter.</p>
+  <a class="sk square" href="ref/35-deco-ajisai.jpg" target="_blank" rel="noopener"><img src="ref/35-deco-ajisai.jpg" alt="Sketch for Hydrangeas" loading="lazy" width="1024" height="1024"></a>
+  <p class="prompt" id="t35">Picture 35 of 36: Hydrangeas. A square picture with a transparent background. A small terracotta pot of blue and purple hydrangea (ajisai) flowers with a few green leaves.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t35">Copy prompt</button><a class="open" href="ref/35-deco-ajisai.jpg" target="_blank" rel="noopener">Open sketch</a><label class="done"><input type="checkbox" id="d35" data-n="35"> Done</label></div>
+</article></section>
+<section class="sec"><h2>Menu picture</h2><p class="note">One picture to sell the game in the 夜ふかし menu.</p><article class="pic" id="p36" data-n="36">
+  <div class="top"><span class="num">36</span><h3>Menu picture</h3><span class="shape">Wide</span></div>
+  <p class="use">The card in the 夜ふかし menu and the title screen.</p>
+  <p class="nosk">No sketch for this one. Send the prompt on its own.</p>
+  <p class="prompt" id="t36">Picture 36 of 36: The menu picture. A wide landscape picture (no sketch for this one). The little ramen stall seen from outside on a rainy night: a wooden stall with red noren curtains, glowing orange lanterns and rising steam; two chunky toy-figure customers on stools, seen from behind; the cook's head just visible behind the counter; wet street reflections and a deep navy sky. Leave calm, empty space at the top for the title, which the game adds. This picture should make someone want to play.</p>
+  <div class="acts"><button type="button" class="copy" data-t="t36">Copy prompt</button><label class="done"><input type="checkbox" id="d36" data-n="36"> Done</label></div>
+</article></section>
+  <p class="foot">Made from the game's own drawing code, so every sketch matches where the picture goes. Sketches and prompts are also in the <a href="https://github.com/LACHENDE/midnight-restaurant-art" target="_blank" rel="noopener">art repo</a> (ref/ and prompts.md).</p>
+</div>
+<script>
+(function(){
+  var TOTAL=36, KEY='mres-art-done', done={};
+  try{ done=JSON.parse(localStorage.getItem(KEY)||'{}')||{}; }catch(e){ done={}; }
+  function save(){ try{ localStorage.setItem(KEY,JSON.stringify(done)); }catch(e){} }
+  function paint(){ var n=0; document.querySelectorAll('.pic').forEach(function(a){ var on=!!done[a.dataset.n]; a.classList.toggle('is-done',on); var cb=a.querySelector('.done input'); if(cb) cb.checked=on; if(on) n++; });
+    document.getElementById('count').textContent=n+' of '+TOTAL+' done'; document.getElementById('fill').style.width=(n/TOTAL*100)+'%'; }
+  document.addEventListener('change',function(e){ var t=e.target; if(t.matches('.done input')){ if(t.checked) done[t.dataset.n]=1; else delete done[t.dataset.n]; save(); paint(); }
+    if(t.id==='hideDone'){ document.body.classList.toggle('hide-done',t.checked); try{ localStorage.setItem(KEY+'-hide',t.checked?'1':''); }catch(e){} } });
+  document.addEventListener('click',function(e){ var b=e.target.closest('button.copy'); if(!b) return; var el=document.getElementById(b.dataset.t), label=b.textContent;
+    function flash(msg,ok){ b.textContent=msg; b.classList.toggle('ok',!!ok); clearTimeout(b._t); b._t=setTimeout(function(){ b.textContent=label; b.classList.remove('ok'); },2200); }
+    function select(){ var r=document.createRange(); r.selectNodeContents(el); var s=getSelection(); s.removeAllRanges(); s.addRange(r); flash('Selected: press and hold to copy'); }
+    try{ navigator.clipboard.writeText(el.textContent).then(function(){ flash('Copied',true); },select); }catch(err){ select(); } });
+  try{ if(localStorage.getItem(KEY+'-hide')){ document.getElementById('hideDone').checked=true; document.body.classList.add('hide-done'); } }catch(e){}
+  paint();
+})();
+</script>
