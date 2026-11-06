@@ -1,0 +1,1039 @@
+{
+  "character": "Ken",
+  "project": "Midnight Restaurant",
+  "motions": [
+    {
+      "name": "idle",
+      "status": "latest_transparent_v2",
+      "grid": [
+        4,
+        4
+      ],
+      "drawn_poses": 16,
+      "files": {
+        "gif": "current/idle/ken-idle.gif",
+        "webp": "current/idle/ken-idle.webp",
+        "sheet": "current/idle/ken-idle-sheet.png"
+      },
+      "gif": {
+        "size": [
+          360,
+          360
+        ],
+        "frame_count": 16,
+        "durations_ms": [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "transparent_corner_every_frame": true
+      },
+      "sheet": {
+        "size": [
+          1254,
+          1254
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "frame_order": "row-major left-to-right top-to-bottom",
+        "crop_rule": "round(col*width/columns), round(row*height/rows); use rounded cell boundaries, dimensions may not divide evenly"
+      }
+    },
+    {
+      "name": "confused",
+      "status": "latest_transparent_v2",
+      "grid": [
+        4,
+        4
+      ],
+      "drawn_poses": 16,
+      "files": {
+        "gif": "current/confused/ken-confused.gif",
+        "webp": "current/confused/ken-confused.webp",
+        "sheet": "current/confused/ken-confused-sheet.png"
+      },
+      "gif": {
+        "size": [
+          360,
+          360
+        ],
+        "frame_count": 16,
+        "durations_ms": [
+          240,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          240,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          240
+        ],
+        "transparent_corner_every_frame": true
+      },
+      "sheet": {
+        "size": [
+          1254,
+          1254
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "frame_order": "row-major left-to-right top-to-bottom",
+        "crop_rule": "round(col*width/columns), round(row*height/rows); use rounded cell boundaries, dimensions may not divide evenly"
+      }
+    },
+    {
+      "name": "confirmed",
+      "status": "latest_transparent_v2",
+      "grid": [
+        4,
+        4
+      ],
+      "drawn_poses": 16,
+      "files": {
+        "gif": "current/confirmed/ken-confirmed.gif",
+        "webp": "current/confirmed/ken-confirmed.webp",
+        "sheet": "current/confirmed/ken-confirmed-sheet.png"
+      },
+      "gif": {
+        "size": [
+          360,
+          360
+        ],
+        "frame_count": 16,
+        "durations_ms": [
+          240,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          240,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          240
+        ],
+        "transparent_corner_every_frame": true
+      },
+      "sheet": {
+        "size": [
+          1254,
+          1254
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "frame_order": "row-major left-to-right top-to-bottom",
+        "crop_rule": "round(col*width/columns), round(row*height/rows); use rounded cell boundaries, dimensions may not divide evenly"
+      }
+    },
+    {
+      "name": "paying",
+      "status": "latest_transparent_v2",
+      "grid": [
+        4,
+        4
+      ],
+      "drawn_poses": 16,
+      "files": {
+        "gif": "current/paying/ken-paying.gif",
+        "webp": "current/paying/ken-paying.webp",
+        "sheet": "current/paying/ken-paying-sheet.png"
+      },
+      "gif": {
+        "size": [
+          360,
+          360
+        ],
+        "frame_count": 16,
+        "durations_ms": [
+          240,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          240,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          240
+        ],
+        "transparent_corner_every_frame": true
+      },
+      "sheet": {
+        "size": [
+          1254,
+          1254
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "frame_order": "row-major left-to-right top-to-bottom",
+        "crop_rule": "round(col*width/columns), round(row*height/rows); use rounded cell boundaries, dimensions may not divide evenly"
+      }
+    },
+    {
+      "name": "arrival-departure",
+      "status": "latest_transparent_v2",
+      "grid": [
+        4,
+        4
+      ],
+      "drawn_poses": 16,
+      "files": {
+        "gif": "current/arrival-departure/ken-arrival-departure.gif",
+        "webp": "current/arrival-departure/ken-arrival-departure.webp",
+        "sheet": "current/arrival-departure/ken-arrival-departure-sheet.png"
+      },
+      "gif": {
+        "size": [
+          360,
+          360
+        ],
+        "frame_count": 36,
+        "durations_ms": [
+          320,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          400,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          400
+        ],
+        "transparent_corner_every_frame": true
+      },
+      "sheet": {
+        "size": [
+          1254,
+          1254
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "frame_order": "row-major left-to-right top-to-bottom",
+        "crop_rule": "round(col*width/columns), round(row*height/rows); use rounded cell boundaries, dimensions may not divide evenly"
+      }
+    },
+    {
+      "name": "hand-raise",
+      "status": "earlier_preview_requires_export_polish",
+      "grid": [
+        4,
+        2
+      ],
+      "drawn_poses": 8,
+      "files": {
+        "gif": "earlier/hand-raise/ken-frame-by-frame.gif",
+        "sheet": "earlier/hand-raise/ken-hand-raise-sheet.png"
+      },
+      "gif": {
+        "size": [
+          443,
+          487
+        ],
+        "frame_count": 14,
+        "durations_ms": [
+          700,
+          110,
+          110,
+          110,
+          110,
+          110,
+          110,
+          950,
+          110,
+          110,
+          110,
+          110,
+          110,
+          110
+        ],
+        "transparent_corner_every_frame": false
+      },
+      "sheet": {
+        "size": [
+          1774,
+          887
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "frame_order": "row-major left-to-right top-to-bottom",
+        "crop_rule": "round(col*width/columns), round(row*height/rows); use rounded cell boundaries, dimensions may not divide evenly"
+      }
+    },
+    {
+      "name": "excited-hand-raise",
+      "status": "earlier_preview_requires_export_polish",
+      "grid": [
+        4,
+        3
+      ],
+      "drawn_poses": 12,
+      "files": {
+        "gif": "earlier/excited-hand-raise/ken-excited-hand-raise.gif",
+        "sheet": "earlier/excited-hand-raise/ken-excited-hand-raise-sheet.png"
+      },
+      "gif": {
+        "size": [
+          400,
+          410
+        ],
+        "frame_count": 24,
+        "durations_ms": [
+          600,
+          90,
+          70,
+          70,
+          70,
+          90,
+          90,
+          90,
+          90,
+          90,
+          100,
+          450,
+          100,
+          90,
+          90,
+          90,
+          90,
+          100,
+          450,
+          90,
+          90,
+          90,
+          90,
+          300
+        ],
+        "transparent_corner_every_frame": false
+      },
+      "sheet": {
+        "size": [
+          1448,
+          1086
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "frame_order": "row-major left-to-right top-to-bottom",
+        "crop_rule": "round(col*width/columns), round(row*height/rows); use rounded cell boundaries, dimensions may not divide evenly"
+      }
+    },
+    {
+      "name": "itadakimasu",
+      "status": "earlier_preview_requires_export_polish",
+      "grid": [
+        4,
+        3
+      ],
+      "drawn_poses": 12,
+      "files": {
+        "gif": "earlier/itadakimasu/ken-itadakimasu.gif",
+        "sheet": "earlier/itadakimasu/ken-itadakimasu-sheet.png"
+      },
+      "gif": {
+        "size": [
+          420,
+          440
+        ],
+        "frame_count": 18,
+        "durations_ms": [
+          650,
+          100,
+          100,
+          130,
+          120,
+          120,
+          350,
+          130,
+          140,
+          450,
+          140,
+          550,
+          120,
+          120,
+          120,
+          120,
+          100,
+          150
+        ],
+        "transparent_corner_every_frame": false
+      },
+      "sheet": {
+        "size": [
+          1448,
+          1086
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "frame_order": "row-major left-to-right top-to-bottom",
+        "crop_rule": "round(col*width/columns), round(row*height/rows); use rounded cell boundaries, dimensions may not divide evenly"
+      }
+    },
+    {
+      "name": "eating-ramen",
+      "status": "earlier_preview_requires_export_polish",
+      "grid": [
+        4,
+        3
+      ],
+      "drawn_poses": 12,
+      "files": {
+        "gif": "earlier/eating-ramen/ken-eating-ramen.gif",
+        "sheet": "earlier/eating-ramen/ken-eating-ramen-sheet.png"
+      },
+      "gif": {
+        "size": [
+          420,
+          440
+        ],
+        "frame_count": 12,
+        "durations_ms": [
+          450,
+          170,
+          150,
+          150,
+          180,
+          230,
+          190,
+          240,
+          170,
+          250,
+          350,
+          300
+        ],
+        "transparent_corner_every_frame": false
+      },
+      "sheet": {
+        "size": [
+          1448,
+          1086
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "frame_order": "row-major left-to-right top-to-bottom",
+        "crop_rule": "round(col*width/columns), round(row*height/rows); use rounded cell boundaries, dimensions may not divide evenly"
+      }
+    },
+    {
+      "name": "delicious",
+      "status": "earlier_preview_requires_export_polish",
+      "grid": [
+        4,
+        3
+      ],
+      "drawn_poses": 12,
+      "files": {
+        "gif": "earlier/delicious/ken-delicious.gif",
+        "sheet": "earlier/delicious/ken-delicious-sheet.png"
+      },
+      "gif": {
+        "size": [
+          420,
+          440
+        ],
+        "frame_count": 12,
+        "durations_ms": [
+          500,
+          140,
+          250,
+          130,
+          160,
+          140,
+          400,
+          160,
+          280,
+          400,
+          180,
+          400
+        ],
+        "transparent_corner_every_frame": false
+      },
+      "sheet": {
+        "size": [
+          1448,
+          1086
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "frame_order": "row-major left-to-right top-to-bottom",
+        "crop_rule": "round(col*width/columns), round(row*height/rows); use rounded cell boundaries, dimensions may not divide evenly"
+      }
+    },
+    {
+      "name": "goodbye",
+      "status": "earlier_preview_requires_export_polish",
+      "grid": [
+        4,
+        3
+      ],
+      "drawn_poses": 12,
+      "files": {
+        "gif": "earlier/goodbye/ken-goodbye.gif",
+        "sheet": "earlier/goodbye/ken-goodbye-sheet.png"
+      },
+      "gif": {
+        "size": [
+          420,
+          440
+        ],
+        "frame_count": 19,
+        "durations_ms": [
+          500,
+          140,
+          150,
+          350,
+          160,
+          260,
+          140,
+          180,
+          170,
+          170,
+          170,
+          200,
+          170,
+          170,
+          170,
+          300,
+          140,
+          140,
+          450
+        ],
+        "transparent_corner_every_frame": false
+      },
+      "sheet": {
+        "size": [
+          1448,
+          1086
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "frame_order": "row-major left-to-right top-to-bottom",
+        "crop_rule": "round(col*width/columns), round(row*height/rows); use rounded cell boundaries, dimensions may not divide evenly"
+      }
+    },
+    {
+      "name": "wrong-order",
+      "status": "earlier_preview_requires_export_polish",
+      "grid": [
+        4,
+        3
+      ],
+      "drawn_poses": 12,
+      "files": {
+        "gif": "earlier/wrong-order/ken-wrong-order.gif",
+        "sheet": "earlier/wrong-order/ken-wrong-order-sheet.png"
+      },
+      "gif": {
+        "size": [
+          420,
+          440
+        ],
+        "frame_count": 16,
+        "durations_ms": [
+          500,
+          160,
+          260,
+          180,
+          420,
+          180,
+          160,
+          180,
+          300,
+          220,
+          220,
+          800,
+          130,
+          130,
+          130,
+          250
+        ],
+        "transparent_corner_every_frame": false
+      },
+      "sheet": {
+        "size": [
+          1448,
+          1086
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "frame_order": "row-major left-to-right top-to-bottom",
+        "crop_rule": "round(col*width/columns), round(row*height/rows); use rounded cell boundaries, dimensions may not divide evenly"
+      }
+    },
+    {
+      "name": "angry-annoyed",
+      "status": "earlier_preview_requires_export_polish",
+      "grid": [
+        4,
+        2
+      ],
+      "drawn_poses": 8,
+      "files": {
+        "gif": "earlier/angry-annoyed/ken-angry-annoyed.gif",
+        "sheet": "earlier/angry-annoyed/ken-angry-annoyed-sheet.png"
+      },
+      "gif": {
+        "size": [
+          320,
+          350
+        ],
+        "frame_count": 17,
+        "durations_ms": [
+          700,
+          200,
+          200,
+          200,
+          100,
+          200,
+          200,
+          200,
+          100,
+          200,
+          200,
+          200,
+          100,
+          200,
+          200,
+          200,
+          600
+        ],
+        "transparent_corner_every_frame": false
+      },
+      "sheet": {
+        "size": [
+          1774,
+          887
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "frame_order": "row-major left-to-right top-to-bottom",
+        "crop_rule": "round(col*width/columns), round(row*height/rows); use rounded cell boundaries, dimensions may not divide evenly"
+      }
+    },
+    {
+      "name": "angry-complaining",
+      "status": "earlier_preview_requires_export_polish",
+      "grid": [
+        4,
+        2
+      ],
+      "drawn_poses": 8,
+      "files": {
+        "gif": "earlier/angry-complaining/ken-angry-complaining.gif",
+        "sheet": "earlier/angry-complaining/ken-angry-complaining-sheet.png"
+      },
+      "gif": {
+        "size": [
+          320,
+          350
+        ],
+        "frame_count": 16,
+        "durations_ms": [
+          700,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          100,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          600
+        ],
+        "transparent_corner_every_frame": false
+      },
+      "sheet": {
+        "size": [
+          1774,
+          887
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "frame_order": "row-major left-to-right top-to-bottom",
+        "crop_rule": "round(col*width/columns), round(row*height/rows); use rounded cell boundaries, dimensions may not divide evenly"
+      }
+    },
+    {
+      "name": "angry-furious",
+      "status": "earlier_preview_requires_export_polish",
+      "grid": [
+        4,
+        2
+      ],
+      "drawn_poses": 8,
+      "files": {
+        "gif": "earlier/angry-furious/ken-angry-furious.gif",
+        "sheet": "earlier/angry-furious/ken-angry-furious-sheet.png"
+      },
+      "gif": {
+        "size": [
+          320,
+          350
+        ],
+        "frame_count": 16,
+        "durations_ms": [
+          700,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          100,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          600
+        ],
+        "transparent_corner_every_frame": false
+      },
+      "sheet": {
+        "size": [
+          1774,
+          887
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "frame_order": "row-major left-to-right top-to-bottom",
+        "crop_rule": "round(col*width/columns), round(row*height/rows); use rounded cell boundaries, dimensions may not divide evenly"
+      }
+    },
+    {
+      "name": "choosing-order",
+      "status": "earlier_preview_requires_export_polish",
+      "grid": [
+        4,
+        3
+      ],
+      "drawn_poses": 12,
+      "files": {
+        "gif": "earlier/choosing-order/ken-choosing-order-fixed.gif",
+        "sheet": "earlier/choosing-order/ken-choosing-order-sheet.png"
+      },
+      "gif": {
+        "size": [
+          420,
+          440
+        ],
+        "frame_count": 12,
+        "durations_ms": [
+          450,
+          200,
+          280,
+          280,
+          220,
+          600,
+          180,
+          200,
+          500,
+          200,
+          300,
+          450
+        ],
+        "transparent_corner_every_frame": false
+      },
+      "sheet": {
+        "size": [
+          1448,
+          1086
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "frame_order": "row-major left-to-right top-to-bottom",
+        "crop_rule": "round(col*width/columns), round(row*height/rows); use rounded cell boundaries, dimensions may not divide evenly"
+      }
+    },
+    {
+      "name": "waiting",
+      "status": "earlier_preview_requires_export_polish",
+      "grid": [
+        4,
+        3
+      ],
+      "drawn_poses": 12,
+      "files": {
+        "gif": "earlier/waiting/ken-waiting.gif",
+        "sheet": "earlier/waiting/ken-waiting-sheet.png"
+      },
+      "gif": {
+        "size": [
+          420,
+          440
+        ],
+        "frame_count": 12,
+        "durations_ms": [
+          600,
+          160,
+          180,
+          300,
+          700,
+          450,
+          350,
+          180,
+          170,
+          280,
+          250,
+          550
+        ],
+        "transparent_corner_every_frame": false
+      },
+      "sheet": {
+        "size": [
+          1448,
+          1086
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "frame_order": "row-major left-to-right top-to-bottom",
+        "crop_rule": "round(col*width/columns), round(row*height/rows); use rounded cell boundaries, dimensions may not divide evenly"
+      }
+    },
+    {
+      "name": "bill-request",
+      "status": "earlier_preview_requires_export_polish",
+      "grid": [
+        4,
+        3
+      ],
+      "drawn_poses": 12,
+      "files": {
+        "gif": "earlier/bill-request/ken-bill-dynamic.gif",
+        "sheet": "earlier/bill-request/ken-bill-request-sheet.png"
+      },
+      "gif": {
+        "size": [
+          420,
+          420
+        ],
+        "frame_count": 12,
+        "durations_ms": [
+          450,
+          140,
+          140,
+          220,
+          170,
+          170,
+          150,
+          400,
+          240,
+          300,
+          180,
+          400
+        ],
+        "transparent_corner_every_frame": false
+      },
+      "sheet": {
+        "size": [
+          1448,
+          1086
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "frame_order": "row-major left-to-right top-to-bottom",
+        "crop_rule": "round(col*width/columns), round(row*height/rows); use rounded cell boundaries, dimensions may not divide evenly"
+      }
+    },
+    {
+      "name": "too-spicy",
+      "status": "earlier_preview_requires_export_polish",
+      "grid": [
+        4,
+        3
+      ],
+      "drawn_poses": 12,
+      "files": {
+        "gif": "earlier/too-spicy/ken-too-spicy.gif",
+        "sheet": "earlier/too-spicy/ken-too-spicy-sheet.png"
+      },
+      "gif": {
+        "size": [
+          420,
+          420
+        ],
+        "frame_count": 16,
+        "durations_ms": [
+          450,
+          100,
+          180,
+          130,
+          110,
+          110,
+          110,
+          110,
+          110,
+          110,
+          110,
+          110,
+          170,
+          220,
+          300,
+          500
+        ],
+        "transparent_corner_every_frame": false
+      },
+      "sheet": {
+        "size": [
+          1448,
+          1086
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "frame_order": "row-major left-to-right top-to-bottom",
+        "crop_rule": "round(col*width/columns), round(row*height/rows); use rounded cell boundaries, dimensions may not divide evenly"
+      }
+    },
+    {
+      "name": "forgot-wallet",
+      "status": "earlier_preview_requires_export_polish",
+      "grid": [
+        4,
+        3
+      ],
+      "drawn_poses": 12,
+      "files": {
+        "gif": "earlier/forgot-wallet/ken-forgot-wallet.gif",
+        "sheet": "earlier/forgot-wallet/ken-forgot-wallet-sheet.png"
+      },
+      "gif": {
+        "size": [
+          420,
+          420
+        ],
+        "frame_count": 12,
+        "durations_ms": [
+          450,
+          180,
+          250,
+          220,
+          300,
+          140,
+          550,
+          200,
+          500,
+          350,
+          200,
+          400
+        ],
+        "transparent_corner_every_frame": false
+      },
+      "sheet": {
+        "size": [
+          1448,
+          1086
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "frame_order": "row-major left-to-right top-to-bottom",
+        "crop_rule": "round(col*width/columns), round(row*height/rows); use rounded cell boundaries, dimensions may not divide evenly"
+      }
+    }
+  ]
+}
